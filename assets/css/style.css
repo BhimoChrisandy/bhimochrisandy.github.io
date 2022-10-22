@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+.container-fluid{
+    padding: 0 90px;
+}
+.container{
+    padding: 0 10px;
+}
+.btn{
+    background-color: rgb(163, 212, 255);
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+}
+.navbar{
+    height: 70px;
+    padding: 20px 0px;
+    transition: all .1s ease-in;
+    z-index: 1;
+}
+.navbar.sticky{
+    position: fixed;
+    width: 100%;
+    transition: all .1s ease-in;
+    background-color: rgba(248, 248, 248, 0.856);
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgb(117, 117, 117);
+    z-index: 1;
+}
+.navbar .navbar-brand{
+    font-weight: 800;
+    font-size: 30px;
+}
+
+
+.home{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+.home .home-flex{
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: repeat(2, 30em);
+    /* justify-content: space-between; */
+    align-self: center;
+}
+.home .intro{
+    /* margin-top: 90px; */
+    margin: auto;
+}
+.home .intro h1{
+    font-size: 38px;
+    font-weight: 800;
+}
+.home .hero-img img{
+    max-width:160%;
+    height: auto;
+}
+
+
+.about{
+    /* background-color: blue; */
+    width: 100%;
+    height: 70vh;
+}
+.about .about-flex{
+    position: relative;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, -30%);
+    margin: auto;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+.about img{
+    max-width: 60%;
+    height: auto;
+}
+.about .about-text{
+    margin: auto;
+}
+.about .about-text span{
+    margin-bottom: 20px;
+    font-weight:600;
+    font-size: 25px;
+    color: rgb(163, 212, 255);
+}
+.about .about-text h1{
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 30px;
+}
+.about .about-text p{
+    color: rgb(167, 168, 168);
+}
+
+/*****************************************************************  KURSUS  *************************************************************/
+.kursus{
+    width: 100%;
+    height: 80vh;
+}
+.kursus .kursus-flex{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -40%);
+    margin: auto;
+}
+.kursus .kursus-text h1{
+    font-weight: 800;
+    font-size: 35px;
+}
+.kursus .kursus-content{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+}
+.kursus .kursus-content .card-content{
+    /* transition: all .2s ease-in-out; */
+    transition: 0.5s all ease-in;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.kursus .kursus-content .card-content img{
+    padding: 15px;
+    border-radius: 25px;
+    max-width: 100%;
+    height: 140px;
+}
+
+.kursus .kursus-content .card-content:hover{
+    transform: scale(1.1);
+}
+
+.kursus .flex-label{
+    display: flex;
+    justify-content: space-between;
+}
+.kursus .flex-label .label{
+    background-color: rgb(163, 212, 255);
+    padding: 2px 5px;
+    border-radius: 10px;
+    color: rgb(86, 134, 175);
+    font-size: 14px;
+}
+.kursus .flex-label .harga{
+    font-weight: 800;
+    font-size: 18px;
+}
+.kursus .card-content-title{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.kursus .include{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* CHILD KURSUS */
+.child-kursus {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 120px;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+.child-kursus .flex-why{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+    
+}
+.child-kursus .card-why{
+    width: 18rem;
+    overflow: hidden;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.child-kursus .card-why .number{
+    position: absolute;
+    left: 260px;
+    top: -10px;
+    background-color: rgb(163, 212, 255);
+    color: white;
+    width: 40px;
+    height:40px;
+    border-radius: 50px;
+}
+.child-kursus .card-why .number p{
+    position: relative;
+    top: 9px;
+    left: 12px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.child-kursus .flex-why .card-why svg{
+    font-size: 80px;
+    background-color: rgb(163, 212, 255);
+    color: rgb(86, 134, 175);
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.child-kursus .card-why .card-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+.child-kursus .card-why .card-text{
+    font-size: 12px;
+    color: rgb(167, 168, 168);
+}
+
+.child-kursus .why{
+    margin: auto;
+}
+.child-kursus .why span{
+    color: rgb(163, 212, 255);
+    font-size: 28px;
+}
+.child-kursus .why h1{
+    font-size: 36px;
+    font-weight: 800;
+}
+.child-kursus .why p{
+    color: rgb(167, 168, 168);
+}
+
+
+
+.kontak{
+    width: 100%;
+    height: 100vh;
+}
+.kontak .kontak-section{
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+.kontak h2, .kontak h4, .kontak p{
+    text-align: center;
+    justify-content: center;
+}
+.kontak h2{
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(163, 212, 255);
+}
+.kontak h4{
+    font-weight: 800;
+    font-size: 25px;
+}
+.kontak form{
+    width: 720px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.kontak input:focus, .kontak textarea:focus{
+    box-shadow: none;
+}
+.kontak .btn{
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(37, 35, 35);
+    padding: 40px;
+    color: white;
+}
+footer .section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+footer .section .logo h1{
+    font-weight: 800;
+    margin-top: -25px;
+}
+footer .tautan ,
+footer .kategori{
+    margin-left: 10em;
+}
+footer .tautan h1,
+footer .kategori h1{
+    font-weight: 800;
+    font-size: 24px;
+}
+footer hr,
+footer a{
+    color: white;
+}
+footer .social{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    /* margin: auto; */
+}
+footer .social .yt,
+footer .social .ig,
+footer .social .tw,
+footer .social .tiktok,
+footer .social .linkedin{
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+footer .section ul{
+    list-style: none;
+    padding: 0 1px;
+}
+
+footer .copyright{
+    text-align: center;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 960px) {
+    /* .navbar .collapse{
+        display:block;
+    } */
+    .container-fluid{
+        padding: 0 20px;
+    }
+    header{
+        height: 90vh;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .navbar .navbar-collapse .navbar-nav{
+        background-color: rgb(37, 35, 35);
+        width: 50%;
+        position: absolute;
+        top: 4.5em;
+        right: 0;
+        padding: 20px;
+        border-bottom-left-radius: 20px;
+    }
+     .navbar.show{
+         transition: all 1s ease;
+     }
+    .navbar .navbar-collapse .navbar-nav .nav-item a{
+        color: white;
+        font-size: 20px;
+    }
+
+
+
+    .home{
+        transform: translate(0, -50%);
+        /* height: 100vh; */
+    }
+    .home .home-flex{
+        grid-template-columns: repeat(1, auto);
+    }
+    .home .home-flex .intro h1{
+        font-size: 45px;
+        text-align: start;
+    }
+    .home .home-flex .intro p{
+        font-size: 18px;
+        text-align: justify;
+    }
+    .home .home-flex .hero-img{
+        display: none;
+    }
+    .about .about-flex{
+        flex-direction: column-reverse;
+    }
+    .about .about-flex{
+        top: 50%;
+        left: 0;
+        transform: translate(0, -60%);
+        flex-direction: column;
+    }
+    .about img{
+        max-width: 100%;
+        height: 200px;
+    }
+    .kursus{
+        height: 100%;
+    }
+    .kursus .kursus-flex{
+        transform: translate(0, 5%);
+    }
+
+    .kursus .kursus-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .child-kursus {
+        flex-direction: column-reverse;
+        position: relative;
+        top: 90%;
+        left: 0;
+        transform: translate(0, 10%);
+    }
+    .child-kursus .flex-why{
+        grid-template-columns: repeat(1, auto);
+        gap: 15px;
+    }
+    .child-kursus .card-why{
+        width: 100%;
+        padding: 0;
+    }
+    .child-kursus .card-why .number{
+        left: 90%;
+    }
+
+    .kontak form{
+        width: 100%;
+    }
+    footer .section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .tautan ,
+    footer .kategori{
+        margin: 0;
+    }
+
+}
